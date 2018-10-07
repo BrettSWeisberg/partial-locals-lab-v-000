@@ -21,7 +21,7 @@ class Student < ActiveRecord::Base
       students = Student.all
       binding.pry
     else
-  
+
       Student.where("name like ?", "#{name}%")  # first section: will check the name column inside the students table
   end
 
