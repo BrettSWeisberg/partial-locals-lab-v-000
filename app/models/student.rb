@@ -20,6 +20,7 @@ class Student < ActiveRecord::Base
     if name.length == 0
       students = Student.all
     else
+      binding.pry
       Student.where("name like ?", "#{name}%")  # first section: will check the name column inside the students table
   end
 
